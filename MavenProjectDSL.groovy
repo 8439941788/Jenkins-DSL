@@ -9,7 +9,7 @@ job('First-Maven-Project-via-DSL'){
     }
     
     steps (
-        maven('clean install', '/')
+        maven('clean install')
     )
     publishers {
         archiveArtifacts '**/*.jar'
