@@ -1,7 +1,7 @@
 job('First-Maven-Project-via-DSL'){
     description("First maven job on ${new Date()}")
     scm {
-        git("https://github.com/anshulc55/Jenkins_Upgradev3.git")
+        git("https://github.com/8439941788/Jenkins-DSL.git")
     }
 
     triggers{
@@ -9,7 +9,7 @@ job('First-Maven-Project-via-DSL'){
     }
     
     steps (
-        maven('clean install', 'maven-samples/single-module/pom.xml')
+        maven('clean install', '/pom.xml')
     )
     publishers {
         archiveArtifacts '**/*.jar'
