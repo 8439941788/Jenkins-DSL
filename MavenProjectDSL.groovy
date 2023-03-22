@@ -1,4 +1,5 @@
-job('Maven-Project-via-DSL')
+job('First-Maven-Project-via-DSL'){
+    description("First maven job on ${new Date()}")
     scm {
         git("https://github.com/anshulc55/Jenkins_Upgradev3.git", master)
     }
@@ -13,3 +14,4 @@ job('Maven-Project-via-DSL')
     publishers {
         archiveArtifacts '**/*.jar'
     }
+}
