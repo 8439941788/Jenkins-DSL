@@ -8,9 +8,9 @@ job('First-Maven-Project-via-DSL'){
         scm('* * * * *')
     }
     
-    steps (
+    steps {
         maven('clean install')
-    )
+    }
     publishers {
         archiveArtifacts '**/*.jar'
     }
